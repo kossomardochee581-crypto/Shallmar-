@@ -1,0 +1,173 @@
+!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shallmaré | The Black Diamond</title>
+    <style>
+        /* STYLE GLOBAL */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* TITRE DIAMANT (Effet scintillant) */
+        .header-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .diamond-title {
+            font-size: 3.5rem; /* Adapté mobile */
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0;
+            background: linear-gradient(135deg, 
+                #000 0%, 
+                #444 20%, 
+                #ffffff 45%, 
+                #ffffff 55%, 
+                #444 80%, 
+                #000 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .diamond-sub {
+            letter-spacing: 5px;
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        /* STYLE TRAPFROBEAT */
+        .genre-tag {
+            background: #fff;
+            color: #000;
+            padding: 5px 15px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* RESEAUX SOCIAUX */
+        .social-container {
+            width: 90%;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .social-link:active {
+            background: #fff;
+            color: #000;
+        }
+
+        /* SECTION INSCRIPTION */
+        .newsletter {
+            width: 90%;
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px dashed #444;
+            text-align: center;
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #111;
+            border: 1px solid #fff;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .newsletter button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #fff;
+            color: #000;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* CONTACT FOOTER */
+        footer {
+            margin-top: auto;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            width: 100%;
+        }
+
+        footer b { color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1 class="diamond-title">Shallmaré</h1>
+        <div class="diamond-sub">The Black Diamond</div>
+        <div class="genre-tag">TRAPFROBEAT</div>
+    </div>
+
+    <div class="social-container">
+        <a href="https://www.tiktok.com/@theshallmaré" class="social-link">TIKTOK : @theshallmaré</a>
+        <a href="https://www.instagram.com/Shallmaré" class="social-link">INSTAGRAM : Shallmaré</a>
+        <a href="https://www.facebook.com/Shallmaré" class="social-link">FACEBOOK : Shallmaré</a>
+    </div>
+
+    <div class="newsletter">
+        <label>REJOINDRE L'ÉQUIPE</label>
+        <input type="email" id="email" placeholder="Ton mail ici...">
+        <button onclick="subscribe()">S'INSCRIRE</button>
+    </div>
+
+    <footer>
+        <p>Booking : <b>Kossomardochee581@gmail.com</b></p>
+        <p>Contact : <b>074 12 23 06</b></p>
+        <p style="margin-top:20px;">© 2024 SHALLMARÉ</p>
+    </footer>
+
+    <script>
+        function subscribe() {
+            const email = document.getElementById('email').value;
+            if(email) {
+                alert("Bien reçu ! Prépare-toi pour l'arrivée du Black Diamond.");
+                document.getElementById('email').value = "";
+            } else {
+                alert("Mets ton mail pour ne rien rater.");
+            }
+        }
+    </script>
+
+</body>
+</html>
